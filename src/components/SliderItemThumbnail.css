@@ -1,4 +1,13 @@
 .thumbnail {
 	display: inline-block;
-  width: 80px;
+  width: 100px;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.thumbnail-row {
+  height: 100px;
+  overflow: hidden;
 }

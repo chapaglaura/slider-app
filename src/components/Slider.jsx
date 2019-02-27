@@ -55,9 +55,13 @@ class Slider extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container-fluid">
                 <SliderItem items={this.props.sliderItems} itemIndex={this.state.slideIndex} nextItem={this.nextSlide} prevItem={this.prevSlide} />
-                <SliderItemThumbnail items={this.props.sliderItems} click={this.clickedThumbnail} />
+                <div className="row thumbnail-row">
+                    <div className="col-12">
+                        <SliderItemThumbnail items={this.props.sliderItems} click={this.clickedThumbnail} />
+                    </div>
+                </div>
             </div>
         );
     }

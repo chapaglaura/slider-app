@@ -18,18 +18,20 @@ class App extends Component {
     	urls: urls
     })
   }
-  
-  componentDidUpdate(prevProps, prevState) {
-  	if (this.state.urls !== prevState.urls) {
-    	console.log(this.state.urls);
-  	}
-	}
 
   render() {
     return (
-      <div>
-        <Form submit={this.addUrl}/>
-        <Slider sliderItems={this.state.urls} trigger={this.componentDidUpdate}/>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <Form submit={this.addUrl}/>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-12">
+            <Slider sliderItems={this.state.urls}/>
+          </div>
+        </div>
       </div>
     );
   }
